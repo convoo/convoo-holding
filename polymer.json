@@ -1,0 +1,12 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/convoo-holding-app/convoo-holding-app.html",
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "includeDependencies": [
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+  ]
+}
