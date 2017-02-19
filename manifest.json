@@ -1,0 +1,7 @@
+{
+  "name": "convoo-holding",
+  "short_name": "convoo-holding",
+  "description": "Holding page for Convoo",
+  "start_url": "/",
+  "display": "standalone"
+}

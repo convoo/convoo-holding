@@ -1,0 +1,130 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="../../bower_components/holding-fire/holding-fire.html">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+
+<dom-module id="convoo-holding-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .heading{
+        font-family: 'Roboto Condensed';
+        font-weight: bold;
+        font-size: 28px;
+        color: #4F79BA;
+        letter-spacing: 0.33px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+      }
+      holding-fire.custom{
+        --holding-fire-background: {
+            /*background: url(images/background.jpg);*/
+        }
+        --holding-fire-overlay:{
+
+        }
+        --holding-fire-container:{
+            margin: auto;
+            opacity: 1;
+            text-align: center;
+        }
+        --holding-fire-logo: {       
+            margin-bottom: 30px;
+        }
+
+        --holding-fire-thankyou-text:{
+            color: black;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        --holding-fire-email-text:{
+
+        }
+        --holding-fire-subscribe-button:{
+
+        }
+        --holding-fire-twitter-button:{
+            background-color:  #58aae8;
+            color: white;
+            width: 100%;
+            height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        --holding-fire-input:{
+            text-align: left;
+            
+        }
+        --holding-fire-subscribe-title:{
+            font-family: 'Roboto';
+        }
+        --holding-fire-subscribe-container:{
+            font-family: 'Roboto';
+            margin: auto;
+            background-color: white;
+        }
+        --holding-fire-twitter-container:{
+            width: 300px;
+            margin: auto;
+            opacity: 0;
+            animation-name: fade;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+        }
+        --holding-fire-show-thankyou:{
+            animation-name: fade;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+
+    }
+    </style>
+
+    <firebase-app
+      name="convoo"
+      api-key="AIzaSyACU-9dEBSmlEq8iwfuDCPCWU81UNDytuQ",
+      auth-domain="convoofire.firebaseapp.com",
+      database-url="https://convoofire.firebaseio.com",
+      storage-bucket="convoofire.appspot.com",
+      messaging-sender-id="1081621064507"></firebase-app>
+
+    <holding-fire
+      app-name="holdingdemo"
+      path="/subscribers"
+      class="custom"
+      alt="Convoo"
+      logo="images/Convoo Icon Logo.png"
+      email="hello@convoo.me"
+      thanks="Thank you for subscribing! Follow us on Twitter for updates."
+      twitter="@convoo"
+    >
+      <div class="heading">
+        Learn something new from every individual
+      </div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+      <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p>Launching soon!</p>
+    </holding-fire>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'convoo-holding-app',
+
+    });
+  </script>
+</dom-module>
