@@ -1,7 +1,19 @@
 {
-  "name": "convoo-holding",
-  "short_name": "convoo-holding",
+  "name": "convoo",
+  "short_name": "convoo",
   "description": "Holding page for Convoo",
   "start_url": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/Icon Light.png",
+      "size": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/Icon Light@3x.png",
+      "size": "72x72",
+      "type": "image/png"
+    }
+  ]
 }
